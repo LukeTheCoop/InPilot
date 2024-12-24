@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "InPilot",
+    "description": "A perfect linkedin co-pilot AI Agent",
+    "version": "0.1.2",
+    "permissions": [
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["assets/cursor.riv"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
